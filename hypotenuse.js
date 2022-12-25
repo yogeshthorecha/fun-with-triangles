@@ -14,10 +14,14 @@ function calculateSumOfSquares(){
 }
    
 function calculateHypotenuse (){
-    
+    if(sides[0].value && sides[1].value){
     var sumOfSquares=calculateSumOfSquares();
     var lengthOfHypotenuse =  Math.sqrt(sumOfSquares);
-    outputBox.innerText = "The length of Hypotenuse is " + lengthOfHypotenuse;
+    outputBox.innerText = "The length of Hypotenuse is " + lengthOfHypotenuse.toFixed(2);
+    }
+    else{
+        outputBox.innerText = "please enter both the fields";
+    }
 }
 
 submitBtn.addEventListener('click', calculateHypotenuse)

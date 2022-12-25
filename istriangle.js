@@ -15,6 +15,7 @@ function calculateSumOfAngles() {
 
 
 isTriangleBtn.addEventListener('click',function(){
+    if(inputs[0].value && inputs[1].value && inputs[2].value){
     if(inputs[0].value>=0 && inputs[1].value>=0 && inputs[2].value>=0){
     var sum = calculateSumOfAngles();
     if(sum === 180){
@@ -24,5 +25,9 @@ isTriangleBtn.addEventListener('click',function(){
     }
     else{
         outputBox.innerText = "please enter positive values";
+    }
+    }
+    else{
+        outputBox.innerText = "please enter values in all fields";
     }
 })
